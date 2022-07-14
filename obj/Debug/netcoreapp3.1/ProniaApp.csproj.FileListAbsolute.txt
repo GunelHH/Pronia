@@ -70,3 +70,5 @@
 /Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/ProniaApp.dll
 /Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/ProniaApp.pdb
 /Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/ProniaApp.genruntimeconfig.cache
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Views/Plant/Detail.cshtml.g.cs
