@@ -21,7 +21,7 @@ namespace ProniaApp.Controllers
             {
                 return NotFound();
             }
-            Plant plant = await context.Plants.Include(p => p.PlantCategories).ThenInclude(p=>p.Category).FirstOrDefaultAsync(p=>p.Id==id);
+            Plant plant = await context.Plants.Include(i=>i.Images).Include(i=>i.PlantInformation).Include(i=>i.PlantTags).ThenInclude(t=>t.Tag).Include(p => p.PlantCategories).ThenInclude(p=>p.Category).FirstOrDefaultAsync(p=>p.Id==id);
             if (plant == null) return NotFound();
         
                 return View(plant);

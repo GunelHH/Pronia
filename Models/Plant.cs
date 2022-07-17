@@ -4,8 +4,8 @@ using ProniaApp.Models.Base;
 
 namespace ProniaApp.Models
 {
-	public class Plant:BaseEntity
-	{
+    public class Plant: BaseEntity
+    {
         public string Name { get; set; }
 
         public decimal Price { get; set; }
@@ -14,9 +14,15 @@ namespace ProniaApp.Models
 
         public string SKU { get; set; }
 
+        public int? PlantInformationId { get; set; }
+
+        public PlantInformation PlantInformation { get; set; }
+
         public List<PlantCategory> PlantCategories { get; set; }
 
         public List<Image> Images { get; set; }
+
+        public List<PlantTag> PlantTags { get; set; }
     }
 }
 

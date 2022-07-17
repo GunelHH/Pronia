@@ -16,6 +16,7 @@
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
     <None Remove="Models\Base\" />
     <None Remove="Views\Plant\" />
+    <None Remove="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -34,6 +35,7 @@
     <Folder Include="wwwroot\assets\scss\" />
     <Folder Include="Models\Base\" />
     <Folder Include="Views\Plant\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

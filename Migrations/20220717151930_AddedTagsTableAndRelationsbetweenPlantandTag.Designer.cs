@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProniaApp.DAL;
 
 namespace ProniaApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220717151930_AddedTagsTableAndRelationsbetweenPlantandTag")]
+    partial class AddedTagsTableAndRelationsbetweenPlantandTag
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -73,9 +75,6 @@ namespace ProniaApp.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PlantInformationId")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(6,2)");
 
@@ -83,8 +82,6 @@ namespace ProniaApp.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("PlantInformationId");
 
                     b.ToTable("Plants");
                 });
@@ -109,27 +106,6 @@ namespace ProniaApp.Migrations
                     b.HasIndex("PlantId");
 
                     b.ToTable("PlantCategories");
-                });
-
-            modelBuilder.Entity("ProniaApp.Models.PlantInformation", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("AboutReturnRequest")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Guarantee")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Shipping")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("PlantInformations");
                 });
 
             modelBuilder.Entity("ProniaApp.Models.PlantTag", b =>
@@ -209,13 +185,6 @@ namespace ProniaApp.Migrations
                         .HasForeignKey("PlantId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("ProniaApp.Models.Plant", b =>
-                {
-                    b.HasOne("ProniaApp.Models.PlantInformation", "PlantInformation")
-                        .WithMany("Plants")
-                        .HasForeignKey("PlantInformationId");
                 });
 
             modelBuilder.Entity("ProniaApp.Models.PlantCategory", b =>
