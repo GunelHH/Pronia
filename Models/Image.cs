@@ -7,7 +7,7 @@ namespace ProniaApp.Models
 	{
         public string Name { get; set; }
 
-        public string Alternative { get; set; }
+        public string Alternative { get; set; } 
 
         public int PlantId { get; set; }
 

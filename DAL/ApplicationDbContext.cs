@@ -26,6 +26,8 @@ namespace ProniaApp.DAL
 
         public DbSet<PlantInformation> PlantInformations { get; set; }
 
+        public DbSet<Setting> Settings { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -38,6 +40,10 @@ namespace ProniaApp.DAL
             {
                 item.SetColumnType("decimal(6,2)");
             }
+
+            modelBuilder.Entity<Setting>()
+                .HasIndex(i => i.Key)
+                .IsUnique();
             base.OnModelCreating(modelBuilder);
         }
     }
