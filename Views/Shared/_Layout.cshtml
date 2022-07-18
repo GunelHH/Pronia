@@ -821,7 +821,7 @@
                                 @foreach (BasketItemVM basketItem in layoutService.GetBasket().BasketItemVMs)
                                 {
                                     <li class="minicart-product">
-                                        <a class="product-item_remove" href="#">
+                                        <a class="product-item_remove" asp-controller="plant" asp-action="RemoveFromBasket" asp-route-id="@layoutService.">
                                             <i class="pe-7s-close"
                                                data-tippy="Remove"
                                                data-tippy-inertia="true"

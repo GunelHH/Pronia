@@ -88,6 +88,23 @@ namespace ProniaApp.Controllers
             BasketVM basket = JsonConvert.DeserializeObject<BasketVM>(HttpContext.Request.Cookies["Basket"]);
             return Json(basket);
         }
-	}
+
+
+        public BasketLayoutVM RemoveFromBasket(int id)
+        {
+            List<BasketItemVM> basketItems = new List<BasketItemVM>();
+            BasketLayoutVM layoutbasket = new BasketLayoutVM();
+            foreach (BasketItemVM item in basketItems)
+            {
+                if (item.Plant.Id == id)
+                {
+                    basketItems.Remove(item);
+                    layoutbasket.TotalPrice -= item.Plant.Price;
+                }
+            }
+            return layoutbasket;
+
+        }
+    }
 }
 
