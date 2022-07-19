@@ -28,6 +28,10 @@ namespace ProniaApp.DAL
 
         public DbSet<Setting> Settings { get; set; }
 
+        public DbSet<Color> Colors { get; set; }
+
+        public DbSet<Size> Sizes { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -40,6 +44,14 @@ namespace ProniaApp.DAL
             {
                 item.SetColumnType("decimal(6,2)");
             }
+
+            modelBuilder.Entity<Size>()
+                .HasIndex(i => i.Name)
+                .IsUnique();
+
+            modelBuilder.Entity<Color>()
+                .HasIndex(i => i.ColorName)
+                .IsUnique();
 
             modelBuilder.Entity<Setting>()
                 .HasIndex(i => i.Key)

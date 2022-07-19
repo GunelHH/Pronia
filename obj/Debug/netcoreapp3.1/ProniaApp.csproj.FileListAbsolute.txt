@@ -145,3 +145,15 @@
 /Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_PlantsPartialView.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Shared/_Layout.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/_ViewImports.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/_ViewStart.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Category/Index.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Dashboard/Index.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Category/Create.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Size/Index.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Size/Create.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Size/Update.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Color/Create.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Color/Index.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Color/Update.cshtml.g.cs

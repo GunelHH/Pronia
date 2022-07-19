@@ -1,0 +1,51 @@
+﻿@model List<Size>
+<div class="main-panel">
+
+    <div>
+        <a asp-area="proniaadmin" asp-controller="size" asp-action="create" class="btn btn-success">Create new Size</a>
+    </div>
+    <div class="table-responsive pt-3">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Settings
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Size size in Model)
+                {
+                    <tr>
+                        <td>
+                            @size.Id
+                        </td>
+                        <td>
+                            @size.Name
+                        </td>
+                        <td class="d-flex ">
+                            <div>
+                                <a asp-area="proniaadmin" asp-controller="size" asp-action="update" asp-route-id="@size.Id" class="btn btn-success ">
+                                    <i class="mdi mdi-border-color"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <a asp-area="proniaadmin" asp-controller="size" asp-action="delete" asp-route-id="@size.Id"  class="btn btn-danger">
+                                    <i class="mdi mdi-delete"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

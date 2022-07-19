@@ -1,0 +1,51 @@
+﻿@model List<Color>
+    <div class="main-panel">
+
+        <div>
+            <a asp-area="proniaadmin" asp-controller="color" asp-action="create" class="btn btn-success">Create new Size</a>
+        </div>
+        <div class="table-responsive pt-3">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Settings
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Color color in Model.OrderByDescending(o=>o.Id))
+                    {
+                        <tr>
+                            <td>
+                                @color.Id
+                            </td>
+                            <td>
+                                @color.ColorName
+                            </td>
+                            <td class="d-flex ">
+                                <div>
+                                    <a asp-area="proniaadmin" asp-controller="color" asp-action="update" asp-route-id="@color.Id" class="btn btn-success ">
+                                        <i class="mdi mdi-border-color"></i>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a asp-area="proniaadmin" asp-controller="color" asp-action="delete" asp-route-id="@color.Id" class="btn btn-danger">
+                                        <i class="mdi mdi-delete"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>

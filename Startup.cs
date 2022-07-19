@@ -35,6 +35,8 @@ namespace ProniaApp
             services.AddScoped<LayoutService>();
 
             services.AddHttpContextAccessor();
+
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,8 +51,16 @@ namespace ProniaApp
 
             app.UseStaticFiles();
 
+
             app.UseEndpoints(endpoints =>
             {
+                    endpoints.MapControllerRoute(
+                      name: "areas",
+                      pattern: "{area:exists}/{controller=dashboard}/{action=index}/{id?}"
+                    );
+               
+
+
                 endpoints.MapControllerRoute("default","{controller=home}/{action=index}/{id?}");
             });
         }

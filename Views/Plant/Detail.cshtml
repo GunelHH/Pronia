@@ -31,10 +31,10 @@
                         <div class="swiper-container single-product-slider">
                             <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                        <a href="~/assets/images/website-images/1-1-570x633.jpg                     ]"
+                                        <a href="~/assets/images/website-images/1-1-570x633.jpg                     "
                                            class="single-img gallery-popup">
                                             <img class="img-full"
-                                                 src="~/assets/images/website-images/@Model.Images.FirstOrDefault(i=>i.IsActive==true).Name)"
+                                                 src="~/assets/images/website-images/@Model.Images.FirstOrDefault(i=>i.IsActive==true).Name"
                                                  alt="@Model.Images.FirstOrDefault(i=>i.IsActive==true).Alternative" />
                                         </a>
                                     </div>
@@ -186,8 +186,12 @@
                             <ul>
                                 @foreach (PlantCategory category in Model.PlantCategories)
                                 {
+                                      
+                                           
+                                        
+
                                     <li>
-                                        <a href="#">@category.Category.Name ,</a>
+                                        <a href="#">@(category.Category.Name.Count() >=2 ? category.Category.Name + "," : category.Category.Name )</a>
                                     </li>
                                 }
 

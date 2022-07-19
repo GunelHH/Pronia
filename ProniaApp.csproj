@@ -19,6 +19,15 @@
     <None Remove="ViewModels\" />
     <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
     <None Remove="Service\" />
+    <None Remove="Areas\" />
+    <None Remove="Areas\ProniaAdmin\" />
+    <None Remove="Areas\ProniaAdmin\Controllers\" />
+    <None Remove="Areas\ProniaAdmin\Views\" />
+    <None Remove="Areas\ProniaAdmin\Views\Shared\" />
+    <None Remove="Areas\ProniaAdmin\Views\Category\" />
+    <None Remove="Areas\ProniaAdmin\Views\Dashboard\" />
+    <None Remove="Areas\ProniaAdmin\Views\Size\" />
+    <None Remove="Areas\ProniaAdmin\Views\Color\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -39,6 +48,16 @@
     <Folder Include="Views\Plant\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Service\" />
+    <Folder Include="Areas\" />
+    <Folder Include="Areas\ProniaAdmin\" />
+    <Folder Include="Areas\ProniaAdmin\Controllers\" />
+    <Folder Include="Areas\ProniaAdmin\Views\" />
+    <Folder Include="Areas\ProniaAdmin\Views\Shared\" />
+    <Folder Include="Areas\ProniaAdmin\Views\Category\" />
+    <Folder Include="wwwroot\Admin\" />
+    <Folder Include="Areas\ProniaAdmin\Views\Dashboard\" />
+    <Folder Include="Areas\ProniaAdmin\Views\Size\" />
+    <Folder Include="Areas\ProniaAdmin\Views\Color\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
@@ -49,6 +68,7 @@
     <Content Remove="wwwroot\assets\js\" />
     <Content Remove="wwwroot\assets\php\" />
     <Content Remove="wwwroot\assets\scss\" />
+    <Content Remove="wwwroot\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.27" />
