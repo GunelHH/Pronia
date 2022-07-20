@@ -28,6 +28,11 @@
     <None Remove="Areas\ProniaAdmin\Views\Dashboard\" />
     <None Remove="Areas\ProniaAdmin\Views\Size\" />
     <None Remove="Areas\ProniaAdmin\Views\Color\" />
+    <None Remove="ViewComponents\" />
+    <None Remove="Views\Shared\Components\" />
+    <None Remove="Views\Shared\Components\Footer\" />
+    <None Remove="Areas\ProniaAdmin\Views\Slider\" />
+    <None Remove="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -58,6 +63,11 @@
     <Folder Include="Areas\ProniaAdmin\Views\Dashboard\" />
     <Folder Include="Areas\ProniaAdmin\Views\Size\" />
     <Folder Include="Areas\ProniaAdmin\Views\Color\" />
+    <Folder Include="ViewComponents\" />
+    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="Views\Shared\Components\Footer\" />
+    <Folder Include="Areas\ProniaAdmin\Views\Slider\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

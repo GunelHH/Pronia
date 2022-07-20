@@ -157,3 +157,7 @@
 /Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Color/Create.cshtml.g.cs
 /Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Color/Index.cshtml.g.cs
 /Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Color/Update.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Components/Footer/Default.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Slider/Index.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Slider/Create.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Slider/Update.cshtml.g.cs
