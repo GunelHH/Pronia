@@ -50,6 +50,44 @@ namespace ProniaApp.Areas.Controllers
             return RedirectToAction(nameof(Index));
            
         }
+
+        public IActionResult Update(int? id)
+        {
+            if (id is null || id == 0) return NotFound();
+            Category category = context.Categories.FirstOrDefault(i => i.Id == id);
+            if (category is null) return NotFound();
+            return View(category);
+        }
+
+        [HttpPost]
+        [AutoValidateAntiforgeryToken]
+
+        public  IActionResult Update(int? id,Category newCategory)
+        {
+            Category category = context.Categories.FirstOrDefault(c => c.Id == id);
+            if (!ModelState.IsValid) return View();
+            if (category is null) return NotFound();
+            Category ExistName = context.Categories.FirstOrDefault(c=>c.Name==newCategory.Name);
+            if (ExistName!=null && ExistName.Id!=id)
+            {
+                ModelState.AddModelError("Name", "The category is already exist!");
+                return View();
+            }
+            context.Entry(category).CurrentValues.SetValues(newCategory);
+            context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        } 
+
+        public IActionResult Delete(int? id)
+        {
+            if (id is null || id == 0) return NotFound();
+            Category category = context.Categories.FirstOrDefault(c => c.Id == id);
+            if (category is null) return NotFound();
+            context.Categories.Remove(category);
+            context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }
 

@@ -33,6 +33,7 @@
     <None Remove="Views\Shared\Components\Footer\" />
     <None Remove="Areas\ProniaAdmin\Views\Slider\" />
     <None Remove="Extensions\" />
+    <None Remove="Areas\ProniaAdmin\Views\Plant\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -68,6 +69,7 @@
     <Folder Include="Views\Shared\Components\Footer\" />
     <Folder Include="Areas\ProniaAdmin\Views\Slider\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Areas\ProniaAdmin\Views\Plant\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

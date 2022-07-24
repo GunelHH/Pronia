@@ -29,7 +29,6 @@ namespace ProniaApp
 
         public BasketLayoutVM GetBasket()
         {
-
             string BasketStr = http.HttpContext.Request.Cookies["Basket"];
 
             if (!string.IsNullOrEmpty(BasketStr))
@@ -58,11 +57,47 @@ namespace ProniaApp
                 return layoutBasket;
             }
             return null;
+           
         }
 
-        
+        public BasketLayoutVM RemoveBasket()
+        {
+            string BasketStr = http.HttpContext.Request.Cookies["Basket"];
+            if (!string.IsNullOrEmpty(BasketStr))
+            {
+                BasketVM basket = JsonConvert.DeserializeObject<BasketVM>(BasketStr);
+                BasketLayoutVM layoutBasket = new BasketLayoutVM();
+                layoutBasket.BasketItemVMs = new List<BasketItemVM>();
+
+                Plant existed;
+
+                foreach (BasketCookieItemVM item in basket.BasketCookieItemVMs)
+                {
+                    existed = context.Plants.Include(i => i.Images).FirstOrDefault(i => i.Id == item.Id);
+                    basket.BasketCookieItemVMs.Remove(item);
+                }
+
+                foreach (BasketItemVM item in layoutBasket.BasketItemVMs)
+                {
+                    existed = context.Plants.Include(i => i.Images).FirstOrDefault(i => i.Id == item.Plant.Id);
 
 
-	}
+                    if (existed == null)
+                    {
+                        layoutBasket.BasketItemVMs.Remove(item);
+
+                        continue;
+                    }
+                    layoutBasket.BasketItemVMs.Remove(item);
+                    return layoutBasket;
+                }
+               
+            }
+            return null;
+        }
+
+
+
+    }
 }
 

@@ -33,7 +33,7 @@ namespace ProniaApp.Controllers
         public async Task<IActionResult> AddBasket(int? id)
         {
             if (id is null || id == 0) return NotFound();
-            Plant plant =await context.Plants.FirstOrDefaultAsync(i => i.Id == id);
+            Plant plant = await context.Plants.FirstOrDefaultAsync(i => i.Id == id);
             if (plant == null) return NotFound();
 
             string BasketStr = HttpContext.Request.Cookies["Basket"];
@@ -47,8 +47,8 @@ namespace ProniaApp.Controllers
 
                 BasketCookieItemVM basketCookie = new BasketCookieItemVM()
                 {
-                    Id=plant.Id,
-                    Quantity=1
+                    Id = plant.Id,
+                    Quantity = 1
                 };
 
                 basket.BasketCookieItemVMs = new List<BasketCookieItemVM>();
@@ -78,8 +78,8 @@ namespace ProniaApp.Controllers
             }
             BasketStr = JsonConvert.SerializeObject(basket);
             HttpContext.Response.Cookies.Append("Basket", BasketStr);
-            
-            return RedirectToAction("index","home");
+
+            return RedirectToAction("index", "home");
         }
 
         public IActionResult ShowBasket()
@@ -90,21 +90,63 @@ namespace ProniaApp.Controllers
         }
 
 
-        public BasketLayoutVM RemoveFromBasket(int id)
-        {
-            List<BasketItemVM> basketItems = new List<BasketItemVM>();
-            BasketLayoutVM layoutbasket = new BasketLayoutVM();
-            foreach (BasketItemVM item in basketItems)
-            {
-                if (item.Plant.Id == id)
-                {
-                    basketItems.Remove(item);
-                    layoutbasket.TotalPrice -= item.Plant.Price;
-                }
-            }
-            return layoutbasket;
 
+        public async Task<IActionResult>RemoveFromBasket(int? id)
+        {
+            if (id is null || id == 0) return NotFound();
+            Plant plant = await context.Plants.FirstOrDefaultAsync(p => p.Id == id);
+            if (plant is null) return NotFound();
+
+
+            string BasketStr = HttpContext.Request.Cookies["Basket"];
+
+
+            //BasketVM basket=new BasketVM();
+            //basket.BasketCookieItemVMs = new List<BasketCookieItemVM>();
+            //basket = JsonConvert.DeserializeObject<BasketVM>(BasketStr);
+
+            if (!string.IsNullOrEmpty(BasketStr))
+            {
+                BasketVM basket = new BasketVM();
+                basket.BasketCookieItemVMs = new List<BasketCookieItemVM>();
+
+                basket = JsonConvert.DeserializeObject<BasketVM>(BasketStr);
+
+
+                BasketCookieItemVM cookieItem = basket.BasketCookieItemVMs.Find(b => b.Id == id);
+               
+                if (cookieItem != null)
+                {
+                    basket.BasketCookieItemVMs.Remove(cookieItem);
+                    //BasketStr = JsonConvert.DeserializeObject<BasketVM>(basket);
+                    //HttpContext.Response.Cookies.Delete(BasketStr);
+                    basket.TotalPrice -= plant.Price;
+                }
+                else
+                {
+                    return NotFound();
+                }
+               
+            }
+
+            return RedirectToAction("index", "home");
         }
+
+        //public BasketLayoutVM RemoveFromBasket(int id)
+        //{
+        //    List<BasketItemVM> basketItems = new List<BasketItemVM>();
+        //    BasketLayoutVM layoutbasket = new BasketLayoutVM();
+        //    foreach (BasketItemVM item in basketItems)
+        //    {
+        //        if (item.Plant.Id == id)
+        //        {
+        //            basketItems.Remove(item);
+        //            layoutbasket.TotalPrice -= item.Plant.Price;
+        //        }
+        //    }
+        //    return layoutbasket;
+
+        //}
     }
 }
 
