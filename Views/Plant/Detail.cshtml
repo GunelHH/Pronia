@@ -185,15 +185,16 @@
                             <span class="title">Categories :</span>
                           
                             <ul>
+                                @*@Model.PlantCategories.LastOrDefault().Id;
                                 @foreach (PlantCategory category in Model.PlantCategories)
                                 {
-                                 
-                                        int count = category.Category.Name.LastOrDefault();
+                                 category.Id == 
+                                       
                                     <li>
                                         <a href="#">@(category.Category.Name.Count() >=2 ? ( category.Category.Name.LastOrDefault()==count? category.Category.Name +","  : category.Category.Name ) : category.Category.Name )</a>
                                     </li>
                                         count++;
-                                 }
+                                 }*@
 
                             </ul>
                         </div>

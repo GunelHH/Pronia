@@ -15,7 +15,7 @@ namespace ProniaApp.Models
         public string Title { get; set; }
         [Required]
         public string Desc { get; set; }
-        [Required]
+
         public string ButtonScript { get; set; }
         [Required]
         public string ButtonURL { get; set; }

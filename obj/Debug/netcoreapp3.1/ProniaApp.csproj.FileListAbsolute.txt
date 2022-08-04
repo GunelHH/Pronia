@@ -164,3 +164,10 @@
 /Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Plant/Create.cshtml.g.cs
 /Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Plant/Index.cshtml.g.cs
 /Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Areas/ProniaAdmin/Views/Category/Update.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/Debug/netcoreapp3.1/Razor/Views/Account/Register.cshtml.g.cs
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Core.dll
+/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Stores.dll

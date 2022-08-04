@@ -55,7 +55,7 @@ namespace ProniaApp.Areas.ProniaAdmin.Controllers
             }
 
 
-            slider.Image =await slider.Photo.FileCreate(env.WebRootPath,"assets/images/slider");
+            slider.Image =await slider.Photo.FileCreate(env.WebRootPath,"assets/images/website-images");
             await context.Sliders.AddAsync(slider);
 
             await context.SaveChangesAsync();
@@ -95,9 +95,9 @@ namespace ProniaApp.Areas.ProniaAdmin.Controllers
                     ModelState.AddModelError("Photo", "Please choose valid image file");
                     return View(existed);
                 }
-                FileValidator.DeleteFile(env.WebRootPath, "assets/images/slider",existed.Image);
+                FileValidator.DeleteFile(env.WebRootPath, "assets/images/website-images", existed.Image);
                 context.Entry(existed).CurrentValues.SetValues(slider);
-                existed.Image = await slider.Photo.FileCreate(env.WebRootPath, "assets/images/slider");
+                existed.Image = await slider.Photo.FileCreate(env.WebRootPath, "assets/images/website-images");
             }
 
             await context.SaveChangesAsync();
@@ -114,6 +114,7 @@ namespace ProniaApp.Areas.ProniaAdmin.Controllers
             if (id is null) return NotFound();
 
             context.Sliders.Remove(slider);
+            FileValidator.DeleteFile(env.WebRootPath,"assets/images/slider",slider.Image);
             await context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

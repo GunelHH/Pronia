@@ -126,7 +126,8 @@ namespace ProniaApp.Controllers
                 {
                     return NotFound();
                 }
-               
+                BasketStr = JsonConvert.SerializeObject(basket);
+                HttpContext.Response.Cookies.Append("Basket", BasketStr);
             }
 
             return RedirectToAction("index", "home");

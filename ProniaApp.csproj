@@ -34,6 +34,8 @@
     <None Remove="Areas\ProniaAdmin\Views\Slider\" />
     <None Remove="Extensions\" />
     <None Remove="Areas\ProniaAdmin\Views\Plant\" />
+    <None Remove="Views\Account\" />
+    <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -70,6 +72,7 @@
     <Folder Include="Areas\ProniaAdmin\Views\Slider\" />
     <Folder Include="Extensions\" />
     <Folder Include="Areas\ProniaAdmin\Views\Plant\" />
+    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
@@ -90,5 +93,6 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.27" />
   </ItemGroup>
 </Project>

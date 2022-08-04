@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Linq;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ProniaApp.Models;
 
 namespace ProniaApp.DAL
 {
-	public class ApplicationDbContext:DbContext
+	public class ApplicationDbContext:IdentityDbContext<AppUser>
 	{
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext>options):base(options)
         {
