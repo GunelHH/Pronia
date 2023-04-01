@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/ProniaApp.csproj": {}
+    "/Users/gunelhesenova/Desktop/Projects/ProniaApp/ProniaApp/ProniaApp.csproj": {}
   },
   "projects": {
-    "/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/ProniaApp.csproj": {
+    "/Users/gunelhesenova/Desktop/Projects/ProniaApp/ProniaApp/ProniaApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/ProniaApp.csproj",
+        "projectUniqueName": "/Users/gunelhesenova/Desktop/Projects/ProniaApp/ProniaApp/ProniaApp.csproj",
         "projectName": "ProniaApp",
-        "projectPath": "/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/ProniaApp.csproj",
+        "projectPath": "/Users/gunelhesenova/Desktop/Projects/ProniaApp/ProniaApp/ProniaApp.csproj",
         "packagesPath": "/Users/gunelhesenova/.nuget/packages/",
-        "outputPath": "/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/obj/",
+        "outputPath": "/Users/gunelhesenova/Desktop/Projects/ProniaApp/ProniaApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/gunelhesenova/.nuget/NuGet/NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YIShcLaDSTjtGtaHUxyhbysk4oPufuaEJ1xu9xf9ay1vZjlkv0AOeQryCz0DEnLALicc9VRCkw+7CYh1q5mj8Q==",
+  "dgSpecHash": "CkMSw2kcuaq+jxQQgEksL1fQ03jd3CVbMfjP1FJP0zB8WCQ8e2VIarqvOPCGGoFvNT1Z+FekFd4ETBSJ9xgd/w==",
   "success": true,
-  "projectFilePath": "/Users/gunelhesenova/Desktop/ProniaApp/ProniaApp/ProniaApp.csproj",
+  "projectFilePath": "/Users/gunelhesenova/Desktop/Projects/ProniaApp/ProniaApp/ProniaApp.csproj",
   "expectedPackageFiles": [
     "/Users/gunelhesenova/.nuget/packages/microsoft.aspnetcore.cryptography.internal/3.1.27/microsoft.aspnetcore.cryptography.internal.3.1.27.nupkg.sha512",
     "/Users/gunelhesenova/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/3.1.27/microsoft.aspnetcore.cryptography.keyderivation.3.1.27.nupkg.sha512",
